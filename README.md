@@ -2,6 +2,7 @@
 
 
 First register with https://openweathermap.org/api. you will get a URl like this 'http://api.openweathermap.org/data/2.5/forecast/daily' with apicode. This url provides the weather api data in JSON format. the you can access it using angularjs easily.
+'http://ip-api.com/json' url will track the current location using ip address.
 
 app.js
     
