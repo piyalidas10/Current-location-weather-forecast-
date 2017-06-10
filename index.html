@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Geolocation</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ </head>
+<body ng-app="geoapp">
+
+	<div ng-controller="mainCtrl as vm">
+				<h3>{{vm.city}},{{vm.country}}</h3>
+				<div class="col-sm-2" ng-repeat="x in vm.data.list track by $index">
+						<p>{{x.dt*1000 | date:"EEE d" }}</p>
+						<img src="http://openweathermap.org/img/w/{{x.weather[0].icon}}.png" alt="forecast">
+						<h4>{{x.temp.max}} °C &nbsp;&nbsp; {{x.temp.min}} °C </h4>
+						<p>{{x.weather[0].description}}</p>
+					
+				</div>
+		
+	</div>
+  
+ </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+<script src="app.js"></script>
+</html>
